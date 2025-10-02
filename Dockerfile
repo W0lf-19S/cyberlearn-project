@@ -10,7 +10,6 @@ RUN apk add --no-cache \
     g++
 
 COPY backend/package*.json ./backend/
-COPY backend/jest.config.js ./backend/
 
 WORKDIR /app/backend
 RUN npm install
