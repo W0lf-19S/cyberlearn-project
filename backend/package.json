@@ -7,7 +7,7 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "jest --verbose --coverage",
-    "test:watch": "jest --watch",
+    "test:watch": "jest",
     "test:unit": "jest tests/unit --coverage",
     "test:integration": "jest tests/integration"
   },
