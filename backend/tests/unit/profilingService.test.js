@@ -1,3 +1,4 @@
+// PRIMEROS AVANCES DEL PROYECTO
 const ProfilingService = require('../../src/services/profilingService');
 
 describe('ProfilingService - clasificarNivel', () => {
