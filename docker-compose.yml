@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: cyberlearn-backend
+    working_dir: /app/backend
+    volumes:
+      - ./backend:/app/backend
+      - /app/backend/node_modules
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+    command: npm run test:watch
+    stdin_open: true
+    tty: true
+
+  # Servicio para Kubernetes (opcional para lab futuro)
+  app:
+    build: .
+    container_name: cyberlearn-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
